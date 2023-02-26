@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *, *:before, *:after {
+  box-sizing: border-box;
+}
+body {
+    font-family: "Nunito Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background-color: #f9f9f9;
+  background-attachment: fixed;
+}
+.content {
+    justify-content: center;
+  align-items: center;
+  display: flex;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  max-width: 1000px;
+}
+.firstheading {
+  width: 100%;
+  margin-left: 1rem;
+  padding-bottom: 0.5em;
+  position: relative;
+  color: rgb(0, 0, 0);
+}
+.box {
+    width: calc(33% - 2rem);
+  min-width: calc(33% - 2rem);
+  height: 410px;
+  min-height: 410px;
+  color: inherit;
+  cursor: pointer;
+  perspective: 1000px;
+  margin: 1rem;
+  position: relative;
+  box-shadow: 0 12px 12px rgba(0,0,0,0.15);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+@media screen and (max-width: 500px) {
+  .box {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 800px) {
+  .box {
+    width: calc(50% - 2rem);
+  }
+}
+
+.first,
+.second{
+    border-radius: 6px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  backface-visibility: hidden;
+  transition: ease-in-out 600ms;
+}
+.first {
+  background-size: cover;
+  padding: 2rem;
+  font-size: 1.618rem;
+  font-weight: 600;
+  color: #fff;
+  overflow: hidden;
+  font-family: Poppins, sans-serif;
+}
+.first:before {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, #bde61a, #3fe61a);
+  opacity: 0.25;
+  z-index: -1;
+  position: absolute;
+  display: block;
+  content: "";
+}
+.box:hover .second {
+  transform: rotateY(0deg);
+}
+.box:nth-child(even) .second {
+  transform: rotateY(180deg);
+}
+.box:nth-child(even):hover .second {
+  transform: rotateY(0deg);
+}
+.box:hover .first {
+  transform: rotateY(180deg);
+}
+.box:nth-child(even):hover .first {
+  transform: rotateY(-180deg);
+}
+.second {
+  background: #000000;
+  transform: rotateY(-180deg);
+  padding: 0 2em;
+}
+.second .button {
+  background: linear-gradient(135deg, #0fba09, #28be0a);
+}
+.button {
+  color: #fff;
+  padding: 0.5em 1em;
+  border-radius: 100px;
+  font: inherit;
+  border: none;
+  position: relative;
+}
+
+
+.backheading{
+    color: white;
+}
+    </style>
+</head>
+<body>
+    <div class="content">
+  <h1 class="firstheading">Card Design</h1>
+ <div class="box">
+    <div class="first" style="background-image: url(https://images.unsplash.com/photo-1468327768560-75b778cbb551?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fGZsb3dlcnN8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60)">
+      <p>Flower card Design</p>
+    </div>
+    <div class="second">
+      <div>
+        <p class="backheading">We believe flowers make a world of a difference and we are so grateful for the opportunity to make your special day as perfect as can be! We are a non-traditional florist, which means the style of our arrangements are whimsical, organic, and natural.</p>
+        <button class="button">Read More</button>
+      </div>
+    </div></div><div class="box">
+    <div class="first" style="background-image: url(https://images.unsplash.com/photo-1570949144026-8f8141748760?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDZ8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60)">
+      <p>Flower card Design</p>
+    </div>
+    <div class="second">
+      <div>
+        <p class="backheading">We believe flowers make a world of a difference and we are so grateful for the opportunity to make your special day as perfect as can be! We are a non-traditional florist, which means the style of our arrangements are whimsical, organic, and natural.</p>
+        <button class="button">Read More</button>
+      </div>
+    </div></div><div class="box">
+    <div class="first" style="background-image: url(https://images.unsplash.com/photo-1596438459194-f275f413d6ff?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE2fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60)">
+      <p>Flower card Design</p>
+    </div>
+    <div class="second">
+      <div>
+        <p class="backheading">We believe flowers make a world of a difference and we are so grateful for the opportunity to make your special day as perfect as can be! We are a non-traditional florist, which means the style of our arrangements are whimsical, organic, and natural.</p>
+        <button class="button">Read More</button>
+      </div>
+    </div></div>
+</div>
+</body>
+</html>
